@@ -1,0 +1,62 @@
+## simple NAMESPACE
+## Tell R what functions the user should be able to access after library(package) call
+
+## export functions
+export(
+  asStreamflow,
+  annualnoise,
+  annualExtremes,
+  lp3Events,
+  circ.s,
+  compare.periods,
+  #predictSignalResid,
+  #print.ssignal,
+
+  #summary.annualnoise,
+
+  fourierAnalysis,
+  independentEvents,
+  sigmaHighFlows,
+  sigmaLowFlows,
+  parameters.list,
+  compare.periods,
+  allstats,
+  residplot.extreme,
+  #sigmaeventsplot,
+  fftmetrics,
+  fft_metrics,
+  getNAA,
+  getFPExt,
+  getSignalParts,
+  getHSAM,
+  getLSAM,
+  getTransitionTime,
+  getHSAF,
+  getLSAF,
+  getTimingHSAM,
+  getTimingLSAM,
+  getIFI,
+  getIDI,
+  prepareBaseline,
+  filterBaseline
+)
+
+import (
+  CircStats, boot, checkmate, ggplot2, lmom
+)
+
+importFrom("graphics", "abline", "axis", "hist", "legend", "lines",
+            "par", "plot", "points", "polygon", "text")
+importFrom("stats", "acf", "ar", "coef", "coefficients", "filter",
+            "fitted", "lm", "median", "na.pass", "predict", "qchisq",
+            "qnorm", "qt", "reorder", "resid", "var")
+importFrom("utils", "head", "read.csv", "read.table", "tail")
+
+S3method(plot, ssignal)
+S3method(summary, ssignal)
+S3method(print, ssignal)
+S3method(summary, streamflow)
+S3method(summary, annualnoise)
+S3method(print, streamflow)
+S3method(plot, compflows)
+
